@@ -1,6 +1,6 @@
 #include "Heap.h"
-#include <vector>
 #include <iostream>
+#include <algorithm>
 
 void Heap::resize(int n) {
 	int* temp = new int[n];
@@ -134,4 +134,18 @@ void Heap::display() {
 		std::cout << data[i] << " ";
 	}
 	std::cout << std::endl;
+}
+
+void Heap::heap_sort() {
+	std::cout << "\nHeap Sort" << std::endl;
+	display();
+	int n = size;
+	for (int i = 0; i < n; i++) {
+		extract();
+	}
+
+	size = n;
+	display();
+	std::reverse(data, data + size);
+	display();
 }

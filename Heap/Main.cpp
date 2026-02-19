@@ -20,6 +20,9 @@ int main() {
 	int A[] = {1, 2, 3, 4, 5};
 	Heap* heap_array = new Heap(A, 5);
 	heap_array->display();
+
+	heap_array->heap_sort();
 	delete heap;
+	delete heap_array;
 	return 0;
 }

@@ -1,6 +1,5 @@
 #ifndef HEAP_H
 #define HEAP_H
-#include <vector>
 
 class Heap {
 private:
@@ -23,6 +22,7 @@ public:
 	void insert(int val);
 	void display();
 	int extract();
+	void heap_sort();
 };
 
 #endif
